@@ -5,19 +5,17 @@ DIFFERENCE BETWEEN sort() AND sorted()
 - sorted(): Built-in function, creates new sorted list, original unchanged
 """
 
-# 1. sort
-my_list = [8,3,1]
-print('my list before applying sort method : ',my_list)
+# 1. sort() method - modifies the original list
+my_list = [8, 3, 1]
+print('my_list before sort()    :', my_list)
 my_list.sort()
-print('my list after applying sort method : ',my_list)
+print('my_list after sort()     :', my_list)  # Original list is modified
 
+print('-' * 50)
 
-print('-'*50)
-
-
-# 2.sorted
-my_list = [8,3,1]
-print('my list before applying sorted function : ',my_list)
-sorted(my_list)
-print('my list after applying sorted function : ',my_list)
-
+# 2. sorted() function - returns a new sorted list, original unchanged
+my_list = [8, 3, 1]
+print('my_list before sorted()  :', my_list)
+new_list = sorted(my_list)  # Store the returned sorted list
+print('my_list after sorted()   :', my_list)  # Original remains unchanged
+print('new_list (sorted copy)   :', new_list)  # New sorted list
